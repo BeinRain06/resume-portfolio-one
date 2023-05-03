@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+div {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.main_field {
+  /* width: 100vw; */
+  height: auto;
+  padding: 1rem;
+  flex-direction: column;
+  background: var(--education-item-background-1);
+  /* border: 1px dashed rgb(136, 55, 1); */
+  box-shadow: 0px 0px 2px rgb(136, 55, 1);
+}
+
+/* professionals */
+
+.professionals {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 260px;
+  transition: all 1s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 260px;
+  height: 3px;
+  background: #ddd;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgb(66, 119, 88);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: rgb(113, 128, 101);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: rgb(235, 235, 235);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 260px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 3px;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: rgb(66, 119, 88);
+}
+
+input[type="range"]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  background: rgb(113, 128, 101);
+}
+
+input[type="range"]:focus::-moz-range-track {
+  background: rgb(235, 235, 235);
+}
+
+input[type="range"]::-ms-track {
+  width: 260px;
+  height: 5px;
+  border-color: transparent;
+  border-width: 6px 0;
+  background: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgb(66, 119, 88);
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: rgb(113, 128, 101);
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #d3d3d3;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: rgb(122, 122, 86);
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: rgb(224, 215, 248);
+}
