@@ -1,3 +1,13 @@
+:root {
+  --background-primary: #f4f4f4;
+  --time-background: green;
+  --spacing-bar-color: rgb(173, 12, 12);
+  --hamburger-background: rgb(90, 90, 192);
+  --web-dev-content: rgb(221, 138, 138);
+  --education-item-background-1: #fff;
+  --education-item-background-2: #d3d3d3;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,12 +46,12 @@ img {
 
 input[type="range"] {
   -webkit-appearance: none;
-  width: 260px;
+  width: 16em;
   transition: all 1s ease-in-out;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  width: 260px;
+  width: 16em;
   height: 3px;
   background: #ddd;
   border-radius: 3px;
@@ -70,7 +80,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-moz-range-track {
-  width: 260px;
+  width: 16em;
   height: 5px;
   background: #ddd;
   border-radius: 3px;
@@ -100,7 +110,7 @@ input[type="range"]:focus::-moz-range-track {
 }
 
 input[type="range"]::-ms-track {
-  width: 260px;
+  width: 16em;
   height: 5px;
   border-color: transparent;
   border-width: 6px 0;
@@ -131,4 +141,48 @@ input[type="range"]:focus::-ms-fill-lower {
 
 input[type="range"]:focus::-ms-fill-upper {
   background: rgb(224, 215, 248);
+}
+
+@media (max-width: 1210px) {
+  label {
+    font-size: 12px;
+  }
+
+  input[type="range"] {
+    width: 11em;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 11em;
+  }
+
+  input[type="range"]::-moz-range-track {
+    width: 11em;
+  }
+
+  input[type="range"]::-ms-track {
+    width: 11em;
+  }
+}
+
+@media (max-width: 992px) {
+  label {
+    font-size: 12px;
+  }
+
+  input[type="range"] {
+    width: 14em;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 14em;
+  }
+
+  input[type="range"]::-moz-range-track {
+    width: 14em;
+  }
+
+  input[type="range"]::-ms-track {
+    width: 14em;
+  }
 }

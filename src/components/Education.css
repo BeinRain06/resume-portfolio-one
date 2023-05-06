@@ -22,6 +22,27 @@ img {
   width: 100%;
 }
 
+.education {
+  background: var(--background-primary);
+}
+
+.my_btn {
+  font-size: 14px;
+  padding: 0.4rem 1rem;
+  background: rgb(81, 81, 185);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 690ms ease-in;
+}
+
+.my_btn.btn_hover {
+  background: var(--time-background);
+  transition: all 690ms ease-in;
+}
+
 .main_field {
   /* width: 100vw; */
   height: auto;
@@ -67,4 +88,16 @@ img {
 
 .education_item:last-child {
   justify-content: center;
+}
+
+@media (max-width: 1210px) {
+  .diploma,
+  P {
+    font-size: 12px;
+  }
+
+  .my_btn {
+    font-size: 12px;
+    padding: 0.4rem 1rem;
+  }
 }

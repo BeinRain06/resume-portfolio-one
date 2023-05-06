@@ -10,7 +10,9 @@ function Side() {
   return (
     <div
       className={
-        isHovered ? `aside_field overlay col-sm-2` : `aside_field col-sm-2`
+        isHovered
+          ? `aside_field overlay col-lg-2 col-md-8`
+          : `aside_field col-lg-2 col-md-8`
       }
       aria-expanded={isHovered ? `true` : `false`}
       onMouseOver={setHoverFunction}
@@ -67,7 +69,7 @@ function Side() {
           </div>
           <div className="status_dev">
             <p className="status_title">React Developer</p>
-            <p>Full Stack Web Developer</p>
+            <p className="status">Full Stack Web Developer</p>
           </div>
         </div>
       )}

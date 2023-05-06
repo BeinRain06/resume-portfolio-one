@@ -1,6 +1,7 @@
-/* :root {
-  --bg-primary: rgb(20, 20, 56);
-} */
+:root {
+  --link-color-hover: rgb(97, 97, 97);
+  --background-li-color: rgb(59, 180, 35);
+}
 
 * {
   box-sizing: border-box;
@@ -23,7 +24,9 @@
   align-items: center;
   width: 80%;
   height: 100%;
-  margin: 0 auto;
+  margin-inline: 1em;
+
+  /* margin: 0 auto; */
 }
 
 .dashboard {
@@ -48,6 +51,91 @@
 .feature {
   list-style: none;
   cursor: pointer;
+  background: rgb(59, 180, 35);
+  padding: 0.5rem 1rem;
+  transition: all 1s ease-in-out;
+}
+
+.feature .active {
+  list-style: none;
+  cursor: pointer;
   background: rgb(4, 17, 210);
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid white;
+  transition: all 1s ease-in-out;
+}
+
+.link_to {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+}
+
+.link_to:hover {
+  color: rgb(97, 97, 97);
+}
+
+.link_to_menu {
+  border-bottom: 1px solid white;
+  color: #dba3a3;
+  cursor: pointer;
+}
+
+/* menu design  */
+.menu {
+  position: relative;
+  z-index: 1;
+}
+
+.menu_amburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: white;
+  background: rgb(26, 26, 49);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menu_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: backgrond 490ms ease-in opacity 1s ease-in-out visibility 1s
+    ease-in-out;
+}
+
+.menu_content.show {
+  opacity: 0;
+  visibility: hidden;
+  transition: backgrond 490ms ease-in opacity 1s ease-in-out visibility 1s
+    ease-in-out;
+}
+
+.area_link_menu {
+  position: relative;
+  top: 1rem;
+  right: 0;
+  width: 4rem;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #d3e3f3;
+}
+
+@media (max-width: 1210px) {
+  .logo_style {
+    font-size: 1rem;
+  }
+  .link_to {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
 }

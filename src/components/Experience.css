@@ -21,6 +21,9 @@ div {
 img {
   width: 100%;
 }
+.exp {
+  background: var(--background-primary);
+}
 
 .main_field {
   /* width: 100vw; */
@@ -35,8 +38,8 @@ img {
 /* experiences */
 
 .experience_box {
-  gap: 1rem;
-  height: 190px;
+  gap: 0.75rem;
+  height: 230px;
   justify-content: center;
   margin: 1rem 0;
   padding-top: 1rem;
@@ -51,11 +54,14 @@ img {
 }
 
 .about_duration {
+  position: relative;
+  left: calc(0.5rem);
+  display: block;
   width: 100%;
   padding: 0.4rem 1rem;
-  font-size: 10px;
   background-color: var(--time-background);
   cursor: pointer;
+  text-align: center;
 }
 
 .web_dev_info {
@@ -87,4 +93,38 @@ img {
 .web_description .description_title {
   font-size: 14px;
   font-weight: bold;
+}
+
+@media (max-width: 1210px) {
+  .experience_box {
+    height: 280px;
+  }
+
+  .web_description {
+    padding-top: 2rem;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: justify;
+  }
+
+  .web_dev_info {
+    width: 75%;
+    height: auto;
+  }
+
+  .about_duration {
+    position: relative;
+    left: calc(10px + 0.35rem);
+    font-size: 10px;
+  }
+
+  p.description_title {
+    font-size: 11px;
+  }
+  p.desction_content {
+    font-size: 12px;
+    width: calc(100% - 2em);
+  }
 }

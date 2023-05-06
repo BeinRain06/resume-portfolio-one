@@ -2,7 +2,7 @@ import "./About.css";
 
 function About() {
   return (
-    <div className="main_field col-sm-6">
+    <div className="main_field col-lg-6 col-md-8">
       <div className="about_me ">
         <h6>About Me</h6>
         <p>

@@ -1,21 +1,29 @@
 import "./Experience.css";
-import { motion } from "framer-motion/dist/framer-motion";
+import { motion } from "framer-motion";
 
 function Experience() {
+  const variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+      },
+    },
+  };
   return (
     <motion.div
       className="exp"
-      initial={{ opacity: 0 }}
-      transition={{
-        duration: 1,
-        ease: [0.5, 0.71, 1, 1.5],
-      }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={"hidden"}
+      animate={"visible"}
+      exit={"hidden"}
+      variants={variants}
     >
       <div className="row">
-        <div className="col-sm-4"></div>
-        <div className="main_field col-sm-6">
+        <div className="col-lg-4 col-md-2"></div>
+        <div className="main_field col-lg-6 col-md-8">
           <h6 className="title_pro">EXPERIENCES</h6>
           <div className="experience_box d-flex flex-row">
             <div className="time_being">
@@ -60,7 +68,7 @@ function Experience() {
             </div>
           </div>
         </div>
-        <div className="col-sm-2"></div>
+        <div className="col-lg-2 col-md-2"></div>
       </div>
     </motion.div>
   );

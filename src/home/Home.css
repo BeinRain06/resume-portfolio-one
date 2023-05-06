@@ -52,6 +52,9 @@ img {
   justify-content: center;
   align-items: center;
 } */
+body {
+  background: var(--background-primary);
+}
 
 .full_page {
   position: relative;
@@ -66,4 +69,10 @@ img {
   align-items: center;
   padding-block: 0.5rem;
   gap: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .home_container {
+    gap: 1rem;
+  }
 }
