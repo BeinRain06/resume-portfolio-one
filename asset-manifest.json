@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/esume-portfolio-one/static/css/main.79993629.css",
+    "main.js": "/esume-portfolio-one/static/js/main.a0fb5738.js",
+    "static/media/bootstrap-icons.woff?": "/esume-portfolio-one/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/esume-portfolio-one/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "index.html": "/esume-portfolio-one/index.html",
+    "main.79993629.css.map": "/esume-portfolio-one/static/css/main.79993629.css.map",
+    "main.a0fb5738.js.map": "/esume-portfolio-one/static/js/main.a0fb5738.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79993629.css",
+    "static/js/main.a0fb5738.js"
+  ]
+}
