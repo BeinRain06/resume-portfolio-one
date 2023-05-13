@@ -1,6 +1,9 @@
 :root {
   --link-color-hover: rgb(97, 97, 97);
   --background-li-color: rgb(59, 180, 35);
+  --background-menu-color: rgb(94, 93, 92);
+  --background-hover-menu-color: rgb(102, 79, 54);
+  --background-icon-open: rgb(66, 119, 82);
 }
 
 * {
@@ -15,37 +18,34 @@
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: blue;
+  padding: 0 1em;
 }
 
 .nav_content {
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 80%;
   height: 100%;
-  margin-inline: 1em;
-
-  /* margin: 0 auto; */
 }
 
-.dashboard {
-  width: 40vw;
+.nav_list {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(6, auto);
   height: 100%;
+  margin: 0 auto;
 }
 
 .area_presented {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 .feature {
@@ -56,7 +56,7 @@
   transition: all 1s ease-in-out;
 }
 
-.feature .active {
+.feature.active {
   list-style: none;
   cursor: pointer;
   background: rgb(4, 17, 210);
@@ -75,43 +75,28 @@
   color: rgb(97, 97, 97);
 }
 
-.link_to_menu {
-  border-bottom: 1px solid white;
-  color: #dba3a3;
-  cursor: pointer;
-}
-
 /* menu design  */
+
 .menu {
+  display: none;
   position: relative;
-  z-index: 1;
+  z-index: 3;
+  background-color: var(--background-menu-color);
+  border-radius: 5px;
+  transition: all 0.35s ease-in-out;
 }
 
-.menu_amburger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.25rem;
-  color: white;
-  background: rgb(26, 26, 49);
-  cursor: pointer;
-  z-index: 3;
+.menu:hover {
+  background-color: var(--background-hover-menu-color);
 }
 
 .menu_content {
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: backgrond 490ms ease-in opacity 1s ease-in-out visibility 1s
-    ease-in-out;
-}
-
-.menu_content.show {
-  opacity: 0;
-  visibility: hidden;
-  transition: backgrond 490ms ease-in opacity 1s ease-in-out visibility 1s
+  opacity: 1;
+  visibility: visible;
+  transition: background 490ms ease-in opacity 1s ease-in-out visibility 1s
     ease-in-out;
 }
 
@@ -125,17 +110,124 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.75rem;
   background: #d3e3f3;
+}
+
+/* icons and hamburger */
+
+.menu_hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.bi-list,
+.bi-x-lg {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.anim_close,
+.anim_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.1rem;
+  border-radius: 5px;
+  object-fit: cover;
+  background-color: var(--background-menu-color);
+  transition: all 1s ease-in-out;
+}
+
+.anim_open {
+  background-color: var(--background-icon-open);
 }
 
 @media (max-width: 1210px) {
   .logo_style {
     font-size: 1rem;
   }
-  .link_to {
-    font-size: 0.8rem;
-  }
 }
 
 @media (max-width: 992px) {
+  .navbar_container {
+    z-index: 99;
+  }
+
+  .nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 80%;
+    margin: 0 auto;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .area_presented {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 294vh;
+    margin: 0 auto;
+    padding: 4rem 0.5rem 1rem;
+    background: #2c2f5a34;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease-in-out;
+  }
+
+  .area_presented.menu_show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .feature {
+    list-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    background: rgba(20, 20, 39, 0.625);
+    width: 150px;
+    text-align: center;
+    border-radius: 24px;
+    transition: all 1s ease-in-out;
+  }
+
+  .feature:hover {
+    background: rgba(20, 20, 39, 0.825);
+  }
+
+  .link_to {
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+    opacity: 0.9;
+    z-index: 10;
+  }
+
+  .link_to:hover {
+    color: rgb(255, 255, 255);
+  }
 }

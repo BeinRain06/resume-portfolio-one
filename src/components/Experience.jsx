@@ -22,10 +22,10 @@ function Experience() {
       variants={variants}
     >
       <div className="row">
-        <div className="col-lg-4 col-md-2"></div>
-        <div className="main_field col-lg-6 col-md-8">
+        <div className="col-lg-4 col-md-2 col-sm-2"></div>
+        <div className="main_field col-lg-6 col-md-8 col-sm-8">
           <h6 className="title_pro">EXPERIENCES</h6>
-          <div className="experience_box d-flex flex-row">
+          <div className="experience_box d-flex ">
             <div className="time_being">
               <span className="about_duration">Fevrier 2022 -March 2023</span>
             </div>
@@ -46,7 +46,7 @@ function Experience() {
               </div>
             </div>
           </div>
-          <div className="experience_box d-flex flex-row">
+          <div className="experience_box d-flex">
             <div className="time_being">
               <span className="about_duration">Fevrier 2022 -March 2023</span>
             </div>
@@ -68,7 +68,7 @@ function Experience() {
             </div>
           </div>
         </div>
-        <div className="col-lg-2 col-md-2"></div>
+        <div className="col-lg-2 col-md-2 col-sm-2"></div>
       </div>
     </motion.div>
   );

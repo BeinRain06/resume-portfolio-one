@@ -29,8 +29,8 @@ function Education() {
       variants={variants}
     >
       <div className="row">
-        <div className="col-lg-4 col-md-2"></div>
-        <div className="main_field col-lg-6 col-md-8">
+        <div className="col-lg-4 col-md-2 col-sm-2"></div>
+        <div className="main_field col-lg-6 col-md-8 col-sm-8">
           <h6 className="title_pro">EDUCATION</h6>
           <div className="education_field">
             <div className="education row">
@@ -98,7 +98,7 @@ function Education() {
             </div>
           </div>
         </div>
-        <div className="col-lg-2 col-md-2"></div>
+        <div className="col-lg-2 col-md-2 col-sm-2"></div>
       </div>
     </motion.div>
   );

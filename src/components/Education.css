@@ -101,3 +101,11 @@ img {
     padding: 0.4rem 1rem;
   }
 }
+
+@media (max-width: 350px) {
+  .education_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

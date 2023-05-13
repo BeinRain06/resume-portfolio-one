@@ -21,9 +21,9 @@ function Skills() {
       exit={"hidden"}
       variants={variants}
     >
-      <div className="row d-flex">
-        <div className="col-lg-4 col-md-2"></div>
-        <div className="main_field col-lg-6 col-md-8">
+      <div className="row d-flex skill_Scontainer">
+        <div className="col-lg-4 col-md-2 col-sm-2"></div>
+        <div className="main_field col-lg-6 col-md-8 col-sm-8">
           <h6 className="title_pro">PROFESSIONALS SKILLS</h6>
           <div className="professionals d-flex">
             <div className="pro_left d-flex flex-column">
@@ -86,7 +86,7 @@ function Skills() {
             </div>
           </div>
         </div>
-        <div className="col-lg-2 col-md-2"></div>
+        <div className="col-lg-2 col-md-2 col-sm-2"></div>
       </div>
     </motion.div>
   );

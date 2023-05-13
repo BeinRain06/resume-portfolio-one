@@ -11,8 +11,8 @@ function Side() {
     <div
       className={
         isHovered
-          ? `aside_field overlay col-lg-2 col-md-8`
-          : `aside_field col-lg-2 col-md-8`
+          ? `aside_field overlay col-lg-2 col-md-8 col-sm-8`
+          : `aside_field col-lg-2 col-md-8 col-sm-8`
       }
       aria-expanded={isHovered ? `true` : `false`}
       onMouseOver={setHoverFunction}

@@ -24,10 +24,10 @@ function Profile() {
       variants={variants}
     >
       <div className="profile_display row d-flex flex-lg-row flex-column">
-        <div className="col-lg-2 col-md-2"></div>
+        <div className="col-lg-2 col-md-2 col-sm-2"></div>
         <Side />
         <About />
-        <div className="col-lg-2 col-md-2"></div>
+        <div className="col-lg-2 col-md-2 col-sm-2"></div>
       </div>
     </motion.div>
   );

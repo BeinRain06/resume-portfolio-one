@@ -45,3 +45,16 @@ img {
     font-size: 12px;
   }
 }
+
+@media (max-width: 350px) {
+  .main_field {
+    text-align: center;
+  }
+
+  .details_info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

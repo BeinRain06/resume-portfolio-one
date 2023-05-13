@@ -40,6 +40,7 @@ img {
 .experience_box {
   gap: 0.75rem;
   height: 230px;
+  flex-direction: row;
   justify-content: center;
   margin: 1rem 0;
   padding-top: 1rem;
@@ -126,5 +127,75 @@ img {
   p.desction_content {
     font-size: 12px;
     width: calc(100% - 2em);
+  }
+}
+
+@media (max-width: 350px) {
+  .experience_box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+  }
+
+  .time_being {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .about_duration {
+    position: relative;
+    left: 0;
+    padding: 0.2rem 1rem;
+    top: 1.4rem;
+    width: 70%;
+  }
+
+  .web_dev_info {
+    width: 100%;
+    height: 100%;
+  }
+
+  .web_dev_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    width: 100%;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .spacing_bar {
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: var(--spacing-bar-color);
+    margin: 0.6rem auto 0.5rem;
+  }
+
+  .web_description {
+    position: relative;
+    top: -2.5rem;
+    width: 100%;
+    height: 260px;
+    text-align: center;
+  }
+
+  .web_description .description_title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .web_description .description_content {
+    margin: 0 auto;
+    width: 80%;
   }
 }
