@@ -37,28 +37,20 @@ You might be interested on how:
       - `export const AppContext = createContext();`
 
     - a function (e.g\*name : AppContextProvider) that **handles** \*\*\_state data changes**\* and **specifies** returned **values\*\* we want to made available for the all entire bunch of components we have.
-      - e.g:
-        > `export const AppContextProvider = (props) => {
-        > const [toggle, setToggle] = useState(false);
-        > const [isHovered, setHover] = useState(false);
-        > const isToggled = () => {
-        > setToggle(!toggle);
-        > console.log(toggle);
-        > };
-        > const setHoverFunction = () => {
-        > setHover(!isHovered);
-        > };
-        > const contextValue = { isToggled, setHoverFunction, toggle, isHovered };
-        > return (
-             <AppContext.Provider value={contextValue}>
-             {props.children}
-             </AppContext.Provider>
-             );
-             };`
+
+- e.g:
+
+  > `export const AppContextProvider(props) => { const [toggle, setToggle] = useState(false); const [isHovered, setHover] = useState(false);
+const isToggled = () => { setToggle(!toggle); console.log(toggle);}; const setHoverFunction = () => {setHover(!isHovered); };const contextValue = { isToggled, setHoverFunction, toggle, isHovered }; return (
+<AppContext.Provider value={contextValue}>
+{props.children}
+</AppContext.Provider>
+);
+};`
 
 - variables we need called in a **destructuring syntax** in specific components in demands
 
-3. Brief think of :
+1. Brief think of :
    - `createContext`and `useState`in the same file (e.g: AppContext.js) and
    - `destructuring syntax variables` and `useContext` in any of the components on demands of these public data.
    -
@@ -74,13 +66,7 @@ You might be interested on how:
 
 ---
 
-![./Desktop-Social-Networking-App1.png](./Desktop-Social-Networking-App1.png)
-
----
-
----
-
-![./Desktop-Social-Networking-App2.png](./Desktop-Social-Networking-App2.png)
+![./Desktop-Resume-Portfolio-One.png](./Desktop-Resume-Portfolio-One.png)
 
 ---
 
@@ -110,13 +96,7 @@ Like this:
 
 ---
 
-![./Mobile-Social-Networking-App1.png](./Desktop-Social-Networking-App1.png)
-
----
-
----
-
-![./Mobile-Social-Networking-App2.png](./Desktop-Social-Networking-App2.png)
+![./Mobile-Resume-Portfolio-One.png](./Mobile-Resume-Portfolio-One.png)
 
 ---
 
